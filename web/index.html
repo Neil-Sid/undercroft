@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undercroft</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  canvas { display: block; width: 100vw; height: 100vh; outline: none; }
+  #loading {
+    position: fixed; inset: 0; display: grid; place-content: center; gap: 14px; text-align: center;
+    font-family: "New York", Georgia, "Palatino Linotype", serif; color: #8a8070; letter-spacing: .3em; font-size: 13px;
+  }
+  #loading b { color: #e0b050; font-size: 40px; letter-spacing: .18em; font-weight: 600; }
+  #credits {
+    position: fixed; left: 12px; bottom: 10px; font: 12px/1.4 "New York", Georgia, "Palatino Linotype", serif;
+    color: #8a8070; opacity: .75;
+  }
+  #credits a { color: #e0b050; text-decoration: none; }
+  #credits a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<canvas id="canvas" tabindex="-1"></canvas>
+<div id="loading"><b>UNDERCROFT</b>LIGHTING THE TORCHES</div>
+<div id="credits">Sound: Kenney, artisticdude, rubberduck, yd (CC0) &middot; <a href="credits.html">Credits</a></div>
+<script>
+  var Module = { canvas: document.getElementById('canvas') };
+  // Browsers only allow sound after the player touches the page.
+  const wake = () => Module.audioContext && Module.audioContext.state !== 'running' && Module.audioContext.resume();
+  addEventListener('keydown', wake);
+  addEventListener('pointerdown', wake);
+</script>
+<script src="undercroft.js"></script>
+</body>
+</html>

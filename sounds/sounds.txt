@@ -1,0 +1,84 @@
+# Which recorded sound plays for each game sound. One line per slot: the slot name, then one or
+# more files from this folder (without .wav), each optionally followed by @pitch (1.5 = higher).
+# Several files are variations, picked at random. A slot that isn't listed, or whose files are
+# missing, keeps its synthesised sound. Sources and licences: CREDITS.md.
+# After editing, re-run tools/import_sounds.py so the listed files are copied here.
+
+# --- the player and the world ---
+step.crypt      kenney_footstep_concrete_000 kenney_footstep_concrete_001 kenney_footstep_concrete_002 kenney_footstep_concrete_003
+step.catacomb   kenney_footstep_snow_000@0.8 kenney_footstep_snow_001@0.8 kenney_footstep_snow_002@0.8 kenney_footstep_snow_003@0.8
+step.ember      kenney_footstep00 kenney_footstep01 kenney_footstep02 kenney_footstep03
+bump            kenney_impactSoft_heavy_000 kenney_impactSoft_heavy_001
+swing           artisticdude_battle_swing artisticdude_battle_swing2 artisticdude_battle_swing3
+hit             kenney_impactPunch_medium_000 kenney_impactPunch_medium_001 kenney_impactPunch_medium_002
+player_hurt     rubberduck_hurt_04 rubberduck_hurt_05 rubberduck_grunt_02
+door            artisticdude_world_door kenney_doorOpen_1 kenney_doorOpen_2
+pickup          artisticdude_inventory_cloth artisticdude_inventory_cloth-heavy kenney_dropLeather
+gold            kenney_handleCoins artisticdude_inventory_coin artisticdude_inventory_coin3
+drink           artisticdude_inventory_bubble3 artisticdude_inventory_bubble
+scroll          kenney_bookFlip1 kenney_bookFlip3
+bolt            artisticdude_battle_magic1
+menu_move       artisticdude_interface_interface1
+menu_select     artisticdude_interface_interface3
+trap            kenney_impactMetal_heavy_001
+chest           kenney_creak1 kenney_creak2
+summon          artisticdude_battle_spell
+equip           artisticdude_inventory_armor-light artisticdude_inventory_chainmail1 artisticdude_inventory_chainmail2
+alarm           kenney_impactBell_heavy_000 kenney_impactBell_heavy_001
+
+# --- creatures: kind.cue, cues are notice attack impact hurt die step ---
+rat.notice      rubberduck_cute_05@1.6 rubberduck_cute_07@1.6
+rat.attack      rubberduck_eat_03@1.3
+rat.impact      kenney_impactPunch_medium_003@1.4
+rat.hurt        rubberduck_cute_04@1.7
+rat.die         rubberduck_cute_09@1.5
+bat.notice      rubberduck_alien_06
+bat.attack      rubberduck_alien_05
+bat.impact      kenney_impactSoft_medium_000@1.6
+bat.hurt        rubberduck_bug_03
+bat.die         rubberduck_alien_04
+skeleton.impact kenney_impactWood_light_000@1.3 kenney_impactWood_light_002@1.3
+ooze.notice     artisticdude_NPC_slime_slime6 artisticdude_NPC_slime_slime9
+ooze.attack     artisticdude_NPC_slime_slime8 artisticdude_NPC_slime_slime10
+ooze.impact     artisticdude_NPC_slime_slime1 artisticdude_NPC_slime_slime5
+ooze.hurt       artisticdude_NPC_slime_slime2 artisticdude_NPC_slime_slime4
+ooze.die        rubberduck_burble_01
+ooze.step       artisticdude_NPC_slime_slime3@0.8
+ghoul.notice    artisticdude_NPC_gutteral_beast_mnstr14 artisticdude_NPC_gutteral_beast_mnstr9
+ghoul.attack    artisticdude_NPC_gutteral_beast_mnstr2 artisticdude_NPC_gutteral_beast_mnstr12
+ghoul.impact    kenney_impactPunch_medium_002 kenney_impactPunch_medium_004
+ghoul.hurt      artisticdude_NPC_gutteral_beast_mnstr15 artisticdude_NPC_gutteral_beast_mnstr1
+ghoul.die       artisticdude_NPC_gutteral_beast_mnstr5
+spider.notice   rubberduck_bug_01 rubberduck_bug_02
+spider.attack   artisticdude_NPC_beetle_bite-small artisticdude_NPC_beetle_bite-small2
+spider.impact   kenney_impactTin_medium_000 kenney_impactTin_medium_002
+spider.hurt     rubberduck_bug_04
+spider.die      artisticdude_NPC_beetle_bite-small3@0.7
+cultist.impact  kenney_impactPunch_medium_003
+cultist.hurt    rubberduck_hurt_01 rubberduck_hurt_03
+cultist.die     rubberduck_scream_02@0.85
+wraith.notice   artisticdude_NPC_shade_shade8 artisticdude_NPC_shade_shade12
+wraith.attack   artisticdude_NPC_shade_shade3 artisticdude_NPC_shade_shade14
+wraith.hurt     artisticdude_NPC_shade_shade4 artisticdude_NPC_shade_shade5
+wraith.die      artisticdude_NPC_shade_shade9
+knight.attack   artisticdude_inventory_chainmail1 artisticdude_inventory_chainmail2
+knight.impact   kenney_impactPlate_heavy_000 kenney_impactPlate_heavy_001 kenney_impactPlate_heavy_002
+knight.hurt     kenney_impactPlate_medium_000 kenney_impactPlate_medium_003
+ogre.notice     artisticdude_NPC_giant_giant2 artisticdude_NPC_giant_giant1
+ogre.attack     artisticdude_NPC_ogre_ogre3 artisticdude_NPC_ogre_ogre4
+ogre.impact     kenney_impactPunch_heavy_000 kenney_impactPunch_heavy_001 kenney_impactPunch_heavy_002
+ogre.hurt       artisticdude_NPC_ogre_ogre1 artisticdude_NPC_ogre_ogre5
+ogre.die        artisticdude_NPC_giant_giant5
+ogre.step       kenney_impactSoft_heavy_002 kenney_impactSoft_heavy_003 kenney_impactSoft_heavy_004
+imp.hurt        rubberduck_hurt_02@1.4
+imp.die         rubberduck_scream_01@1.3
+gargoyle.impact kenney_impactMining_000 kenney_impactMining_001 kenney_impactMining_002
+gargoyle.hurt   kenney_impactMining_003 kenney_impactMining_004
+mimic.attack    rubberduck_eat_02@0.8 rubberduck_eat_04@0.8
+mimic.impact    kenney_impactWood_medium_000 kenney_impactWood_medium_001 kenney_impactWood_medium_002
+mimic.step      kenney_impactWood_heavy_000 kenney_impactWood_heavy_001 kenney_impactWood_heavy_002
+lich.attack     artisticdude_battle_spell@0.9
+lich.hurt       rubberduck_roar_02@0.8
+
+# --- music: plays while exploring the crypt, catacombs and ember halls (title and Lich keep theirs) ---
+music.floors    yd_dungeon002
